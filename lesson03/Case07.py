@@ -3,4 +3,4 @@ text ='半徑=10'
 
 name, r = text.split("=")  # 切割下來的都是字串
 
-print("%s = %d, Area= %.2f" % (name, int(r), int(r) * int(r) * 3.1415))
+print("%s 是 %d 的圓面積為 %.2f" % (name, int(r), int(r) * int(r) * 3.1415))
