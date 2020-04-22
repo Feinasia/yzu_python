@@ -7,6 +7,7 @@ def add(x, y):
 def addAndprint(x,y):
     sum = (x + y) * 1.03
     print(sum)
+    return # 在末端可寫可不寫
 
 print((1+2) * 1.03)
 print((5+2) * 1.03)
