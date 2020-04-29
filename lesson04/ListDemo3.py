@@ -2,8 +2,8 @@
 自動補牌機制
 <=6點 強迫補牌
 >=9點 不需補牌
-7 or 7.5 A,2,3,J,Q,K >12張補
-8 or 8.5 A,2,,J,Q,K >10張補
+7 or 7.5 爆掉機率>50% 不補
+8 or 8.5 爆掉機率>40% 不補
 '''
 import random as r
 poker = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'] * 4
@@ -34,14 +34,14 @@ while True:
         continue
     if 6 < score < 8: #6.5,7,7.5
         count = poker.count('A') + poker.count(2) + poker.count(3) + poker.count('J')+poker.count('Q')+poker.count('K')
-        if count > 12:
+        if (len(poker)-count)/len(poker) < 0.5:
             PC.append(poker.pop(0))
             continue
         else:
             break
     if 8 <= score < 9:  # 8, 8.5
         count = poker.count('A') + poker.count(2) + poker.count('J') + poker.count('Q') + poker.count('K')
-        if count > 10:
+        if (len(poker)-count)/len(poker) < 0.4:
             PC.append(poker.pop(0))
             continue
         else:
