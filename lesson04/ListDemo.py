@@ -31,4 +31,8 @@ def score(po):  #假設 po = [A,9 ,J]
         sum = sum + p
     return sum
 
-print(poker[0:3], '前三張總合為', score(poker[0:3]))
+print('前三張', poker[0:3], '總合為', score(poker[0:3]))
+
+# 元素是否存在於數組中
+print('A' in poker)
+print('B' in poker)
