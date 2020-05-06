@@ -19,3 +19,6 @@ for i in z:
     y = 10
     y = operate(i, y)
     print(y)
+
+
+
