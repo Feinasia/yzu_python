@@ -13,8 +13,9 @@ class Student(Human):  # 繼承 from Human 並在另加
 
     def __str__(self):
         return self.name + ", " + self.sex + ", " + str(self.age) + ', ' + str(self.number) + ', ' + self.grade
-#print(__name__)  # __main__   內建 keyname
 
+
+#print(__name__)  # __main__   內建 keyname
 if __name__ == "__main__":   # 用於表示 在此PY執行才會執行，從其他呼叫 class 就不會執行以下
     h = Human()
     h.name = 'CJ'
